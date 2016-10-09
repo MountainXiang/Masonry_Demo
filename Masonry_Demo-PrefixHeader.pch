@@ -1,0 +1,38 @@
+//
+//  Masonry_Demo-PrefixHeader.pch
+//  Masonry_Demo
+//
+//  Created by XDS on 16/10/9.
+//  Copyright © 2016年 xds. All rights reserved.
+//
+
+#ifndef Masonry_Demo_PrefixHeader_pch
+#define Masonry_Demo_PrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+////If you want to use masonry without all those pesky 'mas_' prefixes. Add #define MAS_SHORTHAND to your prefix.pch before importing Masonry
+//#define MAS_SHORTHAND
+//
+//#import "Masonry.h"
+
+#ifndef __IPHONE_3_0
+#warning "This project uses features only available in iOS SDK 3.0 and later."
+#endif
+
+#ifdef __OBJC__
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+#import <QuartzCore/QuartzCore.h>
+
+//define this constant if you want to use Masonry without the 'mas_' prefix
+#define MAS_SHORTHAND
+
+//define this constant if you want to enable auto-boxing for default syntax
+#define MAS_SHORTHAND_GLOBALS
+
+#import "Masonry.h"
+#endif
+
+#endif /* Masonry_Demo_PrefixHeader_pch */
